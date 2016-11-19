@@ -1,0 +1,14 @@
+{
+  "name": "kofilechallenge",
+  "version": "1.0.0",
+  "description": "Three-part coding challenge for Kofile",
+  "main": "api.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jason Menayan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}

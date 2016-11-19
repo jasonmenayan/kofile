@@ -1,0 +1,20 @@
+Order id: 20150111000001
+    Order item - Real Property Recording: $28.00
+    Order item - Real Property Recording: $26.00
+    Order total: $54.00
+
+Order id: 20150117000001
+    Order item - Real Property Recording: $27.00
+    Order item - Real Property Recording: $45.00
+    Order total: $72.00
+
+Order id: 20150118000001
+    Order item - Real Property Recording: $30.00
+    Order item - Birth Certificate: $23.00
+    Order total: $53.00
+
+Order id: 20150123000001
+    Order item - Birth Certificate: $23.00
+    Order item - Birth Certificate: $23.00
+    Order total: $46.00
+
