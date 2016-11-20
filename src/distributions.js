@@ -3,11 +3,7 @@
 const fees = require('../fees/fees');
 const getOrderItemIndexByType = require('./helpers/getorderitem').getOrderItemIndexByType;
 
-let output = [];
-let distributionTotals = {};
-distributionTotals.Other = 0;
-
-function addToDistributionTotals(name, amount) {
+function addToDistributionTotals(name, amount, distributionTotals) {
 	if (!distributionTotals[name]) {
 		distributionTotals[name] = amount;
 	} else {
@@ -17,6 +13,10 @@ function addToDistributionTotals(name, amount) {
 }
 
 function computeDistributions(orderArray) {
+	let output = [];
+	let distributionTotals = {};
+	distributionTotals.Other = 0;
+
 	orderArray.forEach(order => {
 		let outputArray = [];
 		let distributions = {};
@@ -60,7 +60,7 @@ function computeDistributions(orderArray) {
 		for (let distributionName in distributions) {
 			let amount = distributions[distributionName];
 			outputArray.push(`Fund: ${distributionName}: $${amount.toFixed(2)}`);
-			addToDistributionTotals(distributionName, amount);
+			addToDistributionTotals(distributionName, amount, distributionTotals);
 		}
 		outputArray.push(`Fund: Other: $${totalFees.toFixed(2)}`);
 		distributionTotals.Other = distributionTotals.Other + totalFees;
